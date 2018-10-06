@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>OralBProject</name>
+    <description>Oral B Mobile Game</description>
+    <version>1.0</version>
+    <author>HappyCode Ribeirao</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>22rs58o1q29b</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="HMMG" id="hmmg_layoutTransition" version="1">Layout Transition</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Jorge Popoca" id="PlatformPlus" version="1.5">PlatformPlus</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>StartScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">iPhone only</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="objects">
+            <object-type name="Doce" sid="703055226865482">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="position" sid="217446460563245" type="number" />
+                    <instance-variable name="killed" sid="347722621456821" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="400242353672661">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="cake" pingpong="0" repeatcount="1" repeatto="0" sid="710332379149568" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\candycane.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\lollipop_red.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\mm_red.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\swirl_red.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Veggie" sid="624990968798317">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="position" sid="582553673609598" type="number" />
+                    <instance-variable name="killed" sid="724429876994226" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="362547824018104">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="cake" pingpong="0" repeatcount="1" repeatto="0" sid="112450108427732" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\NPC\Veggies\platformer_pickups_pack_by_ravenmore\cake_128\49.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\NPC\Veggies\platformer_pickups_pack_by_ravenmore\cake_128\58.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\NPC\Veggies\platformer_pickups_pack_by_ravenmore\cake_128\57.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\NPC\Veggies\platformer_pickups_pack_by_ravenmore\cake_128\47.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GeneratorPoint" sid="199995783197349">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="occupied" sid="786330670741683" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313233151036234" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="higiene" sid="540893295817738">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="189698257964980">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="483339136875487" speed="0">
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\brush.png" />
+                        <frame duration="1" hotspotX="0.505495" hotspotY="0.503497" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\fio-dental.png" />
+                        <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\paste1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HitImage" sid="248176762814360">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="333459422194270">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="230115091366611" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\explosionred01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\explosionred02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\explosionred03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\explosionred04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Courses\Games 2D Construct\Kenny Assets\yaycandies\size3\explosionred05.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="paste" sid="451195933712228">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="caught" sid="832463152041474" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="227849234860653">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="581437988596512" speed="5">
+                        <frame duration="1" hotspotX="0.501062" hotspotY="0.5" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\Items\paste.png">
+                            <collision-poly>
+                                <point x="0.286624" y="0.5625" />
+                                <point x="0.498938" y="0.420833" />
+                                <point x="0.870488" y="0.254167" />
+                                <point x="0.881104" y="0.5" />
+                                <point x="0.876858" y="0.758333" />
+                                <point x="0.498938" y="0.816667" />
+                                <point x="0.159236" y="0.6875" />
+                                <point x="0.343949" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="generatorAutoRunner" sid="771403724050545">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="occupied" sid="654962241414860" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="230120330530990" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Block" sid="621431515590024">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="848984318053860">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="367009249635061">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="bg">
+            <object-type name="Border" sid="800790451903609">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841983805513543" speed="5">
+                        <frame duration="1" hotspotX="0.498333" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.108333" y="0.341837" />
+                                <point x="0.498333" y="0.357143" />
+                                <point x="0.926666" y="0.224489" />
+                                <point x="0.946666" y="0.5" />
+                                <point x="0.93" y="0.785714" />
+                                <point x="0.498333" y="0.994898" />
+                                <point x="0.00166666" y="0.984694" />
+                                <point x="0.0316666" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Background" sid="250130186519785">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="516406993443307" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="backgroundTap" sid="568041825479785">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188304860128194" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\background\Background\background.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="textBox">
+            <object-type name="DistanceDisplay" sid="181248640684496">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="HitsText" sid="229461597192942">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="StartScreenText" sid="178298224927836">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TapToPlayText" sid="236914591179097">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextSnapped" sid="608912297945115">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ScoreText" sid="815196158156768">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TimerText" sid="956272355187779">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="heori">
+            <object-type name="Player" sid="510240441575272">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="PlatformPlus" sid="550573640096033">
+                        <behavior id="PlatformPlus" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="828411530083300">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142115403492547" speed="5">
+                        <frame duration="1" hotspotX="0.497462" hotspotY="0.951613" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\happy-teeth.png">
+                            <collision-poly>
+                                <point x="0.182741" y="0.368279" />
+                                <point x="0.796954" y="0.25" />
+                                <point x="0.718274" y="0.975807" />
+                                <point x="0.263959" y="0.978495" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerTreat" sid="990973724889626">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="563708758990357">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="559229238782702">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="196981405351067">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="515577928845212">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938885240668047" speed="5">
+                        <frame duration="1" hotspotX="0.497462" hotspotY="0.951613" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\happy-teeth.png">
+                            <collision-poly>
+                                <point x="0.182741" y="0.368279" />
+                                <point x="0.796954" y="0.25" />
+                                <point x="0.718274" y="0.975807" />
+                                <point x="0.263959" y="0.978495" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Inimigos">
+            <object-type name="germ1" sid="467348231598009">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="432700880304667">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445207761413230" speed="5">
+                        <frame duration="1" hotspotX="0.498328" hotspotY="0.501475" original-source="C:\Users\Rael\Desktop\HappyCode General\HappyCode\Hackathon\Leonardo &amp; Hugo\Assets\germ-3.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Gui">
+            <object-type name="startBackground" sid="213644149770789">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534048503256260" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500614" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Background.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="start" sid="295314440667048">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811224210151167" speed="5">
+                        <frame duration="1" hotspotX="0.505618" hotspotY="0.512195" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Button.png">
+                            <collision-poly>
+                                <point x="0.0449438" y="0.097561" />
+                                <point x="0.494382" y="0" />
+                                <point x="0.966292" y="0.0731707" />
+                                <point x="1" y="0.487805" />
+                                <point x="0.966292" y="0.926829" />
+                                <point x="0.494382" y="1" />
+                                <point x="0.0337079" y="0.926829" />
+                                <point x="0" y="0.487805" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Best_Score" sid="243782325095436">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827342120003414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Best_Score.png">
+                            <collision-poly>
+                                <point x="0.0555556" y="0.0909091" />
+                                <point x="0.5" y="0.030303" />
+                                <point x="0.953704" y="0.0757576" />
+                                <point x="0.990741" y="0.5" />
+                                <point x="0.962963" y="0.939394" />
+                                <point x="0.5" y="1" />
+                                <point x="0.037037" y="0.939394" />
+                                <point x="0.0185185" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BestScoreBackground" sid="324478256851221">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792275866767332" speed="5">
+                        <frame duration="1" hotspotX="0.501285" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\BestScoreBackground.png">
+                            <collision-poly>
+                                <point x="0.0257069" y="0.0568182" />
+                                <point x="0.498715" y="0" />
+                                <point x="0.976864" y="0.0511364" />
+                                <point x="1" y="0.5" />
+                                <point x="0.979434" y="0.954545" />
+                                <point x="0.498715" y="0.977273" />
+                                <point x="0.0231362" y="0.948864" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayButton" sid="654710983106437">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424086066937360" speed="5">
+                        <frame duration="1" hotspotX="0.507246" hotspotY="0.507246" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Play_Button 6.png">
+                            <collision-poly>
+                                <point x="0.144928" y="0.144928" />
+                                <point x="0.492754" y="0" />
+                                <point x="0.855072" y="0.144928" />
+                                <point x="1" y="0.492754" />
+                                <point x="0.855072" y="0.855072" />
+                                <point x="0.492754" y="1" />
+                                <point x="0.144928" y="0.855072" />
+                                <point x="0" y="0.492754" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pause_Button" sid="709250251736121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481526228710184" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Pause_Button 1.png">
+                            <collision-poly>
+                                <point x="0.151515" y="0.147059" />
+                                <point x="0.5" y="0" />
+                                <point x="0.848485" y="0.147059" />
+                                <point x="1" y="0.5" />
+                                <point x="0.848485" y="0.852941" />
+                                <point x="0.5" y="0.985294" />
+                                <point x="0.151515" y="0.852941" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ProgressBar" sid="283345529139221">
+                <plugin id="progressbar" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="671716522662688">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="661007208452042">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="478595043265498">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Function" sid="589477339123359">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Keyboard" sid="918625396039718">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="SnappedText" sid="495783687291984">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="StartText" sid="715724823540772">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LayoutTransition" sid="574758646700838">
+            <plugin id="hmmg_layoutTransition" />
+        </object-type>
+        <object-type name="Background_game" sid="576439942684674">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="906450606422397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Background_game 1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="layer" sid="829951191098989">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335883688577316" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\background\Cozy Game Background\transparent PNG\layer-1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="layer2" sid="718355382066152">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485810940989723" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\background\Cozy Game Background\transparent PNG\layer-2.png">
+                        <collision-poly>
+                            <point x="0.301107" y="0.602214" />
+                            <point x="0.5" y="0.466797" />
+                            <point x="0.69987" y="0.60026" />
+                            <point x="0.586263" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0364583" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="layer3" sid="832107305901419">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="533620243598096" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\background\Cozy Game Background\transparent PNG\layer-3.png">
+                        <collision-poly>
+                            <point x="0.321289" y="0.642578" />
+                            <point x="0.5" y="0.753906" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="layer4" sid="284159568375164">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457387779169661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\background\Cozy Game Background\transparent PNG\layer-4.png">
+                        <collision-poly>
+                            <point x="0.445638" y="0.891276" />
+                            <point x="0.554362" y="0.891276" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="576506972828116">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>StartScreen.xml</layout>
+        <layout>TapTheFoodScreen.xml</layout>
+        <layout>toothRunner.xml</layout>
+        <layout>treatTheTeeth.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>StartScreenEvents.xml</event-sheet>
+        <event-sheet>TapTheFoodScreenEvents.xml</event-sheet>
+        <event-sheet>CustomizeGameHere.xml</event-sheet>
+        <event-sheet>autoRunnerEventSheet.xml</event-sheet>
+        <event-sheet>treatTheTeethEventSheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="22">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="23">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="25" />
+        <global-instance type="Keyboard" uid="27" />
+        <global-instance type="LayoutTransition" uid="42" />
+    </global-instances>
+    <sounds-folder>
+        <file name="Slap-SoundMaster13-49669815.m4a" />
+        <file name="Slap-SoundMaster13-49669815.ogg" />
+        <file name="Slap-SoundMaster13-49669815.wav" />
+        <file name="Commedy_Punch-Poorna_RAo-1017287436.m4a" />
+        <file name="Commedy_Punch-Poorna_RAo-1017287436.ogg" />
+        <file name="Commedy_Punch-Poorna_RAo-1017287436.wav" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="license.txt" />
+        <file name="credits.txt" />
+        <file name="README.txt" />
+    </files-folder>
+</c2project>

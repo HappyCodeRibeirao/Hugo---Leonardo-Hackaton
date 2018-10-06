@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>treatTheTeethEventSheet</name>
+    <events>
+        <variable comment="game length (counts down from GameLength global variable)" constant="0" name="TickerCount" sid="154803904115710" static="0" type="number">0</variable>
+        <variable comment="1 if game is currently in progress" constant="0" name="GameInProgress" sid="306583329432260" static="0" type="number">0</variable>
+        <variable comment="score" constant="0" name="Score" sid="387501744153374" static="0" type="number">0</variable>
+        <variable constant="0" name="ScoreTextLabel" sid="436588965698582" static="0" type="text">Score: </variable>
+        <variable comment="game length in seconds" constant="0" name="GameLength" sid="614446630907913" static="0" type="number">30</variable>
+        <variable constant="0" name="TitleText" sid="686680198619989" static="0" type="text">Welcome to &lt;GAMENAME&gt;</variable>
+        <event-block sid="244923092118659">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="655844411687616" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="545284243454454" type="System">
+                    <param id="0" name="Variable">GameInProgress</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="409086951462171" type="System">
+                    <param id="0" name="Variable">TickerCount</param>
+                    <param id="1" name="Value">GameLength</param>
+                </action>
+                <action id="-9" name="Set value" sid="680745237050127" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="164300296724293" type="ScoreText">
+                    <param id="0" name="Text">ScoreTextLabel &amp; Score</param>
+                </action>
+                <action id="0" name="Set text" sid="549558555405698" type="TimerText">
+                    <param id="0" name="Text">&quot;Time: &quot; &amp; TickerCount</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="555729383659236" type="PlayerTreat">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="609806288762952" type="System">
+                    <param id="0" name="Variable">healthBar</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="131710685386663">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="523964904294075" type="System">
+                    <param id="0" name="Variable">GameInProgress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="658945129895498">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="449554079418855" type="Keyboard" />
+                        <condition id="2" name="Is in touch" sid="854820489809943" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="370632073687831" type="System">
+                            <param id="0" name="Layer">&quot;GameOverLayer&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="375555692074637" type="System">
+                            <param id="0" name="Layer">&quot;GameLayer&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="858386532299479" type="System">
+                            <param id="0" name="Variable">GameInProgress</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="679421841800443" type="System">
+                            <param id="0" name="Object to create">higiene</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">random(Border.Height, LayoutWidth - Border.Height)</param>
+                            <param id="3" name="Y">random(Border.Height, LayoutHeight - Border.Height)</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="813046846879184" type="higiene">
+                            <param id="0" name="Frame number">round(random(0, 2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="565067632187142">
+            <conditions>
+                <condition id="-22" name="Else" sid="786947288132286" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="206305013072514">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="637676623888746" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="337769672509848" type="System">
+                            <param id="0" name="Variable">TickerCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="701602881186190" type="TimerText">
+                            <param id="0" name="Text">&quot;Time: &quot; &amp; TickerCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831733792375174">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="835963243511366" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="127406334462724" type="PlayerTreat">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="714757138803104" type="PlayerTreat">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Touch.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="966078462195617" type="PlayerTreat">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856743395124890">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="366272561579275" type="PlayerTreat">
+                            <param id="0" name="Object">higiene</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="534579047622508" type="higiene" />
+                        <action id="-10" name="Add to" sid="508152400302824" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="391489221596979" type="System">
+                            <param id="0" name="Object to create">higiene</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">random(LayoutWidth*0.2, LayoutWidth*0.8)</param>
+                            <param id="3" name="Y">random(LayoutHeight*0.2, LayoutHeight*0.8)</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="975556424100114" type="higiene">
+                            <param id="0" name="Frame number">round(random(0, 2))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="457285269854605" type="System">
+                            <param id="0" name="Variable">healthBar</param>
+                            <param id="1" name="Value">min(healthBar+33,100)</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="556618983729992" type="ProgressBar">
+                            <param id="0" name="Value">healthBar</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="504989476359730">
+            <conditions>
+                <condition id="1" name="Compare progress" sid="664104698943453" type="ProgressBar">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="693866447223724" type="System">
+                    <param id="0" name="Variable">randomLevel</param>
+                    <param id="1" name="Value">round(random(1,2))</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="589608597049224">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="572698678954041" type="System">
+                            <param id="0" name="Variable">randomLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="518965181942283" type="System">
+                            <param id="0" name="Layout">TapTheFoodScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="138031534829581">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="963131691978308" type="System">
+                            <param id="0" name="Variable">randomLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="125558082910651" type="System">
+                            <param id="0" name="Layout">toothRunner</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="315619017502260">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="412338183549905" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="291098381181073" type="System">
+                    <param id="0" name="Variable">healthBar</param>
+                    <param id="1" name="Value">7*level</param>
+                </action>
+                <action id="3" name="Set progress" sid="308412487723114" type="ProgressBar">
+                    <param id="0" name="Value">healthBar</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

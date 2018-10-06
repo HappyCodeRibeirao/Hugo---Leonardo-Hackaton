@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CustomizeGameHere</name>
+    <events>
+        <comment>TO CUSTOMIZE THE GAME:</comment>
+        <comment>  1.  Set the title of your game (appears on start screen)</comment>
+        <variable comment="game title for start screen" constant="0" name="GameTitle" sid="500751170105482" static="0" type="text">&lt;Enter Title Here&gt;</variable>
+        <comment></comment>
+        <comment>  2. Set the singular and plural forms of the rodent you&apos;re targeting</comment>
+        <variable comment="singular form of target in the game" constant="0" name="RodentSingularForm" sid="106679804717599" static="0" type="text">&lt;Enter singular form of rodent here&gt;</variable>
+        <variable comment="plural form of target in the game" constant="0" name="RodentPluralForm" sid="781350243930755" static="0" type="text">&lt;Enter plural form of rodent here&gt;</variable>
+        <comment></comment>
+        <comment>  3. Set the verbs indicating what happens to the rodent (2nd person)</comment>
+        <variable comment="verb indicating how the rodents are disposed of" constant="0" name="VerbPresentTense" sid="409930123205832" static="0" type="text">&lt;Enter present form of eradication here&gt;</variable>
+        <variable comment="verb indicating how the rodents are disposed of" constant="0" name="VerbPastTense" sid="645938226870419" static="0" type="text">&lt;Enter past form of eradication here&gt;</variable>
+        <comment></comment>
+        <comment>  4. Set the number of rodents you can miss before game is over</comment>
+        <variable comment="if you miss this many, the game is over" constant="0" name="MaxEscapees" sid="854661779293802" static="0" type="number">3</variable>
+        <comment></comment>
+        <comment>  5. Customize the background layer with a suitable texture (many seamless tiles are available at maxtextures.com and attribution free for non-commercial use).  To do so, assign the image to the TileBackground object&apos;s Image property (you can cut and paste the image).  It will tile automatically, so a size of 256x256 is a good target.</comment>
+        <comment></comment>
+        <comment>  6. Pick an image for your rodent and assign it to the first (and only) frame of both the Rodent object AND the RodentSnapped object Animations property.  You may need to resize appropriately on the SnappedLayer of each screen.  (clker.com is a good place for public domain vector-based art that requires no license or attribution)</comment>
+        <comment></comment>
+        <comment>  7. Pick an image for your &apos;hit&apos; and assign it to the HitImage object making that image the only frame in the Animations property.  This is the image that will spawn to subsume the rodent when it&apos;s tapped (think fire, grim reaper, explosion, stars, etc.)</comment>
+        <comment></comment>
+        <comment>  8. (optional) modify the number and placement of Hole objects; try not to get too close or your rodents will overlap</comment>
+        <comment>  9. (optional) choose an actual image for the Hole to appear during the game.  To do so, assign your image to the Hole&apos;s Animation property (replacing the fuschia rectangle), and set the following variable to 1</comment>
+        <variable comment="whether to show image of hole at runtime" constant="0" name="ShowHoleImage" sid="484796479293336" static="0" type="number">0</variable>
+        <comment></comment>
+        <comment>  10. (optional) Experiment with the Fade behavior durations of the Rodent and HitImage objects to change the cadence of the game. You can modify these attributes in the Properties panel.</comment>
+        <comment>  12. (optional) Use alternative sound effects for hit and miss.  Check out bfxr.net or soundbible.com for some options.  Import these under the &quot;Sounds&quot; folder of the Project, then modify the values below to point to the newly imported files.</comment>
+        <variable comment="slap sound" constant="0" name="HitSoundFileName" sid="862485917532985" static="0" type="text">Slap-SoundMaster13-49669815</variable>
+        <variable constant="0" name="MissSoundFileName" sid="887774313524635" static="0" type="text">Commedy_Punch-Poorna_RAo-1017287436</variable>
+        <variable constant="0" name="healthBar" sid="731848133920932" static="0" type="number">100</variable>
+        <variable constant="0" name="level" sid="708943970938413" static="0" type="number">1</variable>
+        <variable constant="0" name="randomLevel" sid="738287439074255" static="0" type="number">1</variable>
+    </events>
+</c2eventsheet>
