@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TapTheFoodES</name>
+    <events>
+        <include>GlobalVariables</include>
+        <variable comment="A candy or veggie spawn" constant="0" name="candyOrVeggie" sid="261337531455558" static="0" type="number">0</variable>
+        <event-block sid="130967996034504">
+            <conditions>
+                <condition id="0" name="On function" sid="492171148067335" type="Function">
+                    <param id="0" name="Name">&quot;GetItemGenerationInterval&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="643019701398465" type="Function">
+                    <param id="0" name="Value">Random(100, 150) / 100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="824221333659168">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="864679797798706" type="System" />
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="813656673218242" type="Doce">
+                    <param id="0" name="Instance variable">killed</param>
+                </action>
+                <action id="-9" name="Set value" sid="385871018899384" type="System">
+                    <param id="0" name="Variable">healthBar</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="601448240373769" title="GameMode">
+            <sub-events>
+                <event-block sid="830570755162664">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="320723749474929" type="System">
+                            <param id="0" name="Interval (seconds)">Function.Call(&quot;GetItemGenerationInterval&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="931756428203801">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="561249452364994" type="System">
+                                    <param id="0" name="Variable">candyOrVeggie</param>
+                                    <param id="1" name="Value">round(random(0,1))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="983058947128796">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="312419872598139" type="System">
+                                            <param id="0" name="Variable">candyOrVeggie</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="775006188518067" type="System">
+                                            <param id="0" name="Object to create">Doce</param>
+                                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                                            <param id="2" name="X">random(LayoutWidth*0.2, LayoutWidth*0.8)</param>
+                                            <param id="3" name="Y">random(LayoutHeight*0.3, LayoutHeight*0.8)</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="781078100025648" type="GeneratorPoint">
+                                            <param id="0" name="Object">Doce</param>
+                                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="832169706428854" type="Doce">
+                                            <param id="0" name="Frame number">round(random(0, 4))</param>
+                                        </action>
+                                        <action disabled="1" id="-14" name="Toggle boolean" sid="193783789898193" type="GeneratorPoint">
+                                            <param id="0" name="Instance variable">occupied</param>
+                                        </action>
+                                        <action disabled="1" id="-10" name="Set value" sid="559633714542958" type="Doce">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Value">GeneratorPoint.IID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="315667278697839">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="451828500252501" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="534024752848925" type="System">
+                                            <param id="0" name="Object to create">Veggie</param>
+                                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                                            <param id="2" name="X">random(LayoutWidth*0.2, LayoutWidth*0.8)</param>
+                                            <param id="3" name="Y">random(LayoutHeight*0.3, LayoutHeight*0.8)</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Spawn another object" sid="117764501804967" type="GeneratorPoint">
+                                            <param id="0" name="Object">Veggie</param>
+                                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="144034261075144" type="Veggie">
+                                            <param id="0" name="Frame number">round(random(0, 3))</param>
+                                        </action>
+                                        <action disabled="1" id="-14" name="Toggle boolean" sid="243245349547857" type="GeneratorPoint">
+                                            <param id="0" name="Instance variable">occupied</param>
+                                        </action>
+                                        <action disabled="1" id="-10" name="Set value" sid="892279657881845" type="Veggie">
+                                            <param id="0" name="Instance variable">position</param>
+                                            <param id="1" name="Value">GeneratorPoint.IID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="708114975141007">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="984372907316111" type="Touch">
+                            <param id="0" name="Object">Doce</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="7" name="Play (by name)" sid="610569871380522" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">HitSoundFileName</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="167339502923797" type="Doce">
+                            <param id="0" name="Object">HitImage</param>
+                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="394660612192215" type="Doce">
+                            <param id="0" name="Instance variable">killed</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="160600671714410" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="488991189800548" type="Doce" />
+                        <action id="-9" name="Set value" sid="156927816841085" type="System">
+                            <param id="0" name="Variable">healthBar</param>
+                            <param id="1" name="Value">max(healthBar-10,0)</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="961669331851467" type="ProgressBar">
+                            <param id="0" name="Value">healthBar</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="775485378600690">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="859945027829130" type="Touch">
+                            <param id="0" name="Object">Veggie</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="7" name="Play (by name)" sid="259291234480779" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">HitSoundFileName</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="704628652420996" type="Veggie">
+                            <param id="0" name="Instance variable">killed</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="528354785532789" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="960944722292202" type="Veggie" />
+                        <action id="-9" name="Set value" sid="600613856987265" type="System">
+                            <param id="0" name="Variable">healthBar</param>
+                            <param id="1" name="Value">min(healthBar+10,100)</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="871940547914678" type="ProgressBar">
+                            <param id="0" name="Value">healthBar</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519555774664052">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="243429347824105" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="238403978283902" type="System">
+                            <param id="0" name="Variable">healthBar</param>
+                            <param id="1" name="Value">6*level</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="287089999141366" type="ProgressBar">
+                            <param id="0" name="Value">healthBar</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="420710468913623" type="System">
+                            <param id="0" name="Variable">levelTimeGoal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="317460938635419" type="timeLevel">
+                            <param id="0" name="Text">levelTimeGoal</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Win conditon-Change text for win or lose</comment>
+                <event-block any="1" sid="408734205021914">
+                    <conditions>
+                        <condition id="1" name="Compare progress" sid="764618811228518" type="ProgressBar">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="280051898360473" type="System">
+                            <param id="0" name="Variable">levelTimeGoal</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="868328599123610" type="System">
+                            <param id="0" name="Variable">isSnapped</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="461641251757343" title="SnappedMode">
+            <sub-events>
+                <event-block sid="625103063672150">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="431765653771380" type="System">
+                            <param id="0" name="Variable">isSnapped</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="802217347079741" type="ProgressBar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="999414486620735" type="System">
+                            <param id="0" name="Layer">&quot;SnappedLayer&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="758745199247334" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="933782742018712">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="810382606630187" type="System">
+                                    <param id="0" name="Variable">levelTimeGoal</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="1" name="Compare progress" sid="866832467317291" type="ProgressBar">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="114777567789517" type="ribbonFonts">
+                                    <param id="0" name="Text">&quot;You Win&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="740882429295172" type="boardfonts">
+                                    <param id="0" name="Text">&quot;Next level!&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="141035398369437">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="222135065585088" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="201074673468508" type="ProgressBar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="305662021735267" type="System">
+                            <param id="0" name="Layer">&quot;SnappedLayer&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="603666433399183" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="214655777170285">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="298075800847589" type="Touch">
+                            <param id="0" name="Object">forwardblue</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="302089986155829" type="ProgressBar">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="407471889653020" type="System">
+                            <param id="0" name="Layout">StartScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="633906482706499">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="960720657248097" type="Touch">
+                            <param id="0" name="Object">forwardblue</param>
+                        </condition>
+                        <condition id="1" name="Compare progress" sid="317281385803230" type="ProgressBar">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="334853644810504" type="System">
+                            <param id="0" name="Variable">LastLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="194096801270251" type="System">
+                            <param id="0" name="Layout">Instructions</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

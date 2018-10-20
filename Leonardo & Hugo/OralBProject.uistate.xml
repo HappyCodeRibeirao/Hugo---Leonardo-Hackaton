@@ -10,10 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">treatTheTeeth</layout>
-        <layout active="1" order="3">TapTheFoodScreen</layout>
-        <event-sheet order="1">treatTheTeethEventSheet</event-sheet>
-        <event-sheet order="2">TapTheFoodScreenEvents</event-sheet>
+        <layout order="7">treatTheTeeth</layout>
+        <layout order="5">TapTheFood</layout>
+        <event-sheet order="2">toothRunnerES</event-sheet>
+        <event-sheet order="1">TapTheFoodES</event-sheet>
+        <event-sheet order="3">StartES</event-sheet>
+        <event-sheet active="1" order="4">InstructionsES</event-sheet>
+        <event-sheet order="0">treatTheTeethES</event-sheet>
+        <event-sheet order="6">GlobalVariables</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -55,10 +59,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BestScoreBackground/" />
         <folder expanded="1" path="animation-folder/PlayButton/" />
         <folder expanded="1" path="animation-folder/Pause_Button/" />
+        <folder expanded="1" path="animation-folder/board/" />
+        <folder expanded="1" path="animation-folder/ribbon/" />
+        <folder expanded="1" path="animation-folder/forwardblue/" />
+        <folder expanded="1" path="animation-folder/clock/" />
         <folder expanded="1" path="animation-folder/Background_game/" />
         <folder expanded="1" path="animation-folder/layer/" />
         <folder expanded="1" path="animation-folder/layer2/" />
         <folder expanded="1" path="animation-folder/layer3/" />
         <folder expanded="1" path="animation-folder/layer4/" />
+        <folder expanded="1" path="animation-folder/bg/" />
     </folders-expanded>
 </c2uistate>

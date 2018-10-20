@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -247,6 +248,22 @@
             <object-type name="TimerText" sid="956272355187779">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="timeMulti" sid="184368384257139">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Rael\Documents\GitHub\Hugo---Leonardo-Hackaton\Leonardo &amp; Hugo\Fonts\time.png" />
+            </object-type>
+            <object-type name="timeLevel" sid="135284525838453">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Rael\Documents\GitHub\Hugo---Leonardo-Hackaton\Leonardo &amp; Hugo\Fonts\time.png" />
+            </object-type>
+            <object-type name="boardfonts" sid="395952164650522">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Rael\Documents\GitHub\Hugo---Leonardo-Hackaton\Leonardo &amp; Hugo\Fonts\instructions-menu.png" />
+            </object-type>
+            <object-type name="ribbonFonts" sid="725881267817288">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Rael\Documents\GitHub\Hugo---Leonardo-Hackaton\Leonardo &amp; Hugo\Fonts\ribbon.png" />
+            </object-type>
         </object-folder>
         <object-folder name="heori">
             <object-type name="Player" sid="510240441575272">
@@ -413,7 +430,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481526228710184" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\game 2D\Game 2D\Assets\Ultimate GUI Kit\GUI assets\Pause_Button 1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\Gui\UI\buttons\pause_green.png">
                             <collision-poly>
                                 <point x="0.151515" y="0.147059" />
                                 <point x="0.5" y="0" />
@@ -435,6 +452,81 @@
                         <behavior id="Anchor" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type name="board" sid="304882842042120">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="590908322370198" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500956" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\Gui\UI\boards\board.png">
+                            <collision-poly>
+                                <point x="0.0262467" y="0.0382409" />
+                                <point x="0.5" y="0.0191205" />
+                                <point x="0.964567" y="0.0516252" />
+                                <point x="0.971129" y="0.499044" />
+                                <point x="0.954068" y="0.933078" />
+                                <point x="0.0419948" y="0.938815" />
+                                <point x="0.0183727" y="0.499044" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ribbon" sid="418941625675546">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741789959542573" speed="5">
+                        <frame duration="1" hotspotX="0.500682" hotspotY="0.502041" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\Gui\UI\ribbons\ribbon.png">
+                            <collision-poly>
+                                <point x="0.130969" y="0.391837" />
+                                <point x="0.499318" y="0.142857" />
+                                <point x="0.869031" y="0.391837" />
+                                <point x="0.91678" y="0.497959" />
+                                <point x="0.923602" y="0.771429" />
+                                <point x="0.499318" y="0.612245" />
+                                <point x="0.0777626" y="0.767347" />
+                                <point x="0.0791269" y="0.497959" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="forwardblue" sid="390287760909092">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977139351234849" speed="5">
+                        <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\Gui\UI\buttons\forward-blue.png">
+                            <collision-poly>
+                                <point x="0.0960452" y="0.0944444" />
+                                <point x="0.497175" y="0.0111111" />
+                                <point x="0.898305" y="0.1" />
+                                <point x="0.954802" y="0.5" />
+                                <point x="0.881356" y="0.883333" />
+                                <point x="0.497175" y="0.927778" />
+                                <point x="0.0564972" y="0.944444" />
+                                <point x="0.0508475" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="clock" sid="201780929995332">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128209408558647" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505263" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\Gui\Jungle-GUI-PNG\PNG\bubble\clock.png">
+                            <collision-poly>
+                                <point x="0.243902" y="0.210526" />
+                                <point x="0.5" y="0" />
+                                <point x="0.756098" y="0.210526" />
+                                <point x="0.97561" y="0.494737" />
+                                <point x="0.829268" y="0.852632" />
+                                <point x="0.5" y="0.968421" />
+                                <point x="0.158537" y="0.863158" />
+                                <point x="0.0121951" y="0.494737" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Touch" sid="661007208452042">
@@ -529,24 +621,37 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground" sid="576506972828116">
-            <plugin id="TiledBg" />
-            <texture />
+        <object-type name="bg" sid="812352013325983">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621472845805492" speed="5">
+                    <frame duration="1" hotspotX="0.501529" hotspotY="0.5" original-source="C:\Users\Rael\Documents\GitHub\Assets\Assets\background\bg1.png">
+                        <collision-poly>
+                            <point x="0.0152905" y="0.0247525" />
+                            <point x="0.98471" y="0.0247525" />
+                            <point x="0.981651" y="0.970297" />
+                            <point x="0.0183486" y="0.970297" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>StartScreen.xml</layout>
-        <layout>TapTheFoodScreen.xml</layout>
+        <layout>Instructions.xml</layout>
+        <layout>TapTheFood.xml</layout>
         <layout>toothRunner.xml</layout>
         <layout>treatTheTeeth.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>StartScreenEvents.xml</event-sheet>
-        <event-sheet>TapTheFoodScreenEvents.xml</event-sheet>
-        <event-sheet>CustomizeGameHere.xml</event-sheet>
-        <event-sheet>autoRunnerEventSheet.xml</event-sheet>
-        <event-sheet>treatTheTeethEventSheet.xml</event-sheet>
+        <event-sheet>StartES.xml</event-sheet>
+        <event-sheet>TapTheFoodES.xml</event-sheet>
+        <event-sheet>GlobalVariables.xml</event-sheet>
+        <event-sheet>toothRunnerES.xml</event-sheet>
+        <event-sheet>treatTheTeethES.xml</event-sheet>
+        <event-sheet>InstructionsES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="22">

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GlobalVariables</name>
+    <events>
+        <variable constant="0" name="LastLevel" sid="633958076428904" static="0" type="number">0</variable>
+        <variable comment="message displaying in the center of the first screen" constant="0" name="StartScreenMessage" sid="402417325592666" static="0" type="text"></variable>
+        <variable comment="Is in snapped mode" constant="0" name="isSnapped" sid="265353206399253" static="0" type="number">0</variable>
+        <variable comment="if you miss this many, the game is over" constant="0" name="MaxEscapees" sid="854661779293802" static="0" type="number">3</variable>
+        <variable comment="slap sound" constant="0" name="HitSoundFileName" sid="862485917532985" static="0" type="text">Slap-SoundMaster13-49669815</variable>
+        <variable constant="0" name="MissSoundFileName" sid="887774313524635" static="0" type="text">Commedy_Punch-Poorna_RAo-1017287436</variable>
+        <variable constant="0" name="healthBar" sid="731848133920932" static="0" type="number">100</variable>
+        <variable constant="0" name="level" sid="708943970938413" static="0" type="number">1</variable>
+        <variable constant="0" name="randomLevel" sid="738287439074255" static="0" type="number">1</variable>
+        <variable constant="0" name="levelTimeGoal" sid="732061284855466" static="0" type="number">30</variable>
+    </events>
+</c2eventsheet>

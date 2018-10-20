@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartES</name>
+    <events>
+        <include>GlobalVariables</include>
+        <event-block sid="546583655190623">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="892121022529168" type="System" />
+            </conditions>
+            <actions>
+                <action id="-45" name="Reset persisted objects" sid="683733926308818" type="System" />
+                <action id="-9" name="Set value" sid="699729093831727" type="System">
+                    <param id="0" name="Variable">isSnapped</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="678525840729268" title="UnsnappedMode">
+            <sub-events>
+                <comment>Reset the game state and start</comment>
+                <event-block sid="519829467124755">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="280089467540525" type="Touch">
+                            <param id="0" name="Object">PlayButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="904008509040569" type="System" />
+                        <action id="-2" name="Go to layout" sid="174035019852827" type="System">
+                            <param id="0" name="Layout">Instructions</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

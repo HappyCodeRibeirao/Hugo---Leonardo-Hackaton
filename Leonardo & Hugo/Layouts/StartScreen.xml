@@ -2,7 +2,7 @@
 <c2layout>
     <name>StartScreen</name>
     <sid>412214897064267</sid>
-    <event-sheet>StartScreenEvents</event-sheet>
+    <event-sheet>StartES</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -39,8 +39,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>557</x>
-                        <y>416</y>
+                        <x>733</x>
+                        <y>348</y>
                         <z>0</z>
                         <width>1639</width>
                         <height>961</height>
